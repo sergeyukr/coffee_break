@@ -25,7 +25,12 @@ class OrdersController < ApplicationController
   # GET /orders/new.json
   def new
     @order = Order.new
-
+    2.times do
+    drink = @order.drinks.build
+    end
+   # 1.times do
+   # baking = @order.bakings.build
+   # end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @order }
