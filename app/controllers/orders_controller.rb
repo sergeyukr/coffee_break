@@ -25,8 +25,6 @@ class OrdersController < ApplicationController
   # GET /orders/new.json
   def new
     @order = Order.new
-   
-   # 2.times {@order.drinks.build}
     @order.build_drink
     3.times {@order.bakings.build}
    # 1.times do
