@@ -16,7 +16,7 @@
     <%= f.text_field :userName %>
   </div>
 
-  <%= f.fields_for :drinks do |builder| %>
+  <%= f.fields_for :drink do |builder| %>
     <%= render "drink_fields", :f => builder %>
   <% end %>
 

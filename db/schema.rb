@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(:version => 20130103100021) do
   end
 
   create_table "drinks", :force => true do |t|
-    t.integer  "order_id"
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "order_id"
   end
 
   create_table "items", :force => true do |t|
