@@ -1,21 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Username:</b>
+  <b>Order name:</b>
   <%= @order.userName %>
 </p>
 
-<p>  Napitok: <%= @order.drink.name %> </p>
-
-
+<ul>  Napitok: <%= @order.drink.name %> 
 <% for item in @order.drink.items%>
-	<%= item.name%><br />
+	<li><%= item.name%></li>
 <% end %> 
+</ul>
 
+<ol> Vipechka:
 <% for baking in @order.bakings %>
-
-<p>  Vipechka: <%=baking.name %> Count: <%=baking.value %> </p>
-
+	<li> Name: <%=baking.name %> Count: <%=baking.value %> </li>
 <% end %>
+</ol>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
