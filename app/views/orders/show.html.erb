@@ -7,6 +7,11 @@
 
 <p>  Napitok: <%= @order.drink.name %> </p>
 
+
+<% for item in @order.drink.items%>
+	<%= item.name%><br />
+<% end %> 
+
 <% for baking in @order.bakings %>
 
 <p>  Vipechka: <%=baking.name %> Count: <%=baking.value %> </p>
