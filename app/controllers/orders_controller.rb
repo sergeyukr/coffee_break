@@ -26,8 +26,9 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
    
-    3.times {@order.drinks.build}
+    2.times {@order.drinks.build}
     
+    3.times {@order.bakings.build}
    # 1.times do
    # baking = @order.bakings.build
    # end

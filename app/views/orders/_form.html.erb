@@ -20,7 +20,9 @@
     <%= render "drink_fields", :f => builder %>
   <% end %>
 
-  
+  <%= f.fields_for :bakings do |builder| %>
+    <%= render "baking_fields", :f => builder %>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>
