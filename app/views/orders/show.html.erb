@@ -8,6 +8,9 @@
 
 <p>  Napitok: <%=@order.drink.name %> </p>
 
+<% for item in @order.drink.items %>
+<p>  K napitku: <%=item.name %> Count: <%=item.value %> </p>
+<% end %>
 
 <% for baking in @order.bakings %>
 <p>  Vipechka: <%=baking.name %> Count: <%=baking.value %> </p>

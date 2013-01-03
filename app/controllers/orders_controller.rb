@@ -26,12 +26,9 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
    
-    #2.times {@order.drinks.build}
-    @order.build_drink
+    @order.build_drink.items.build
     3.times {@order.bakings.build}
-   # 1.times do
-   # baking = @order.bakings.build
-   # end
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @order }
