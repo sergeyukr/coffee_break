@@ -5,10 +5,8 @@
   <%= @order.userName %>
 </p>
 
-<% for drink in @order.drinks %>
-<p>  Napitok: <%=h drink.name %> </p>
-<% end %>
 
+<p>  Napitok: <%= @order.drink.name %> </p>
 <% for baking in @order.bakings %>
 <p>  Vipechka: <%=baking.name %> Count: <%=baking.value %> </p>
 <% end %>

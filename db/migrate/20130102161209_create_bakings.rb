@@ -3,7 +3,6 @@ class CreateBakings < ActiveRecord::Migration
     create_table :bakings do |t|
       t.string :name
       t.integer :value
-
       t.timestamps
     end
   end
