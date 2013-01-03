@@ -19,8 +19,11 @@
   <%= f.fields_for :drink do |builder| %>
     <%= render "drink_fields", :f => builder %>
   <% end %>
+  
+  
 
 
+<hr />
   <%= f.fields_for :bakings do |builder| %>
     <%= render "baking_fields", :f => builder %>
   <% end %>

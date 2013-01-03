@@ -4,4 +4,10 @@
   <%= f.check_box :_destroy %>
   <%= f.label :_destroy, "Remove" %>
 </p>
+<hr />
+<p>
+  <%= f.fields_for :items do |builder| %>
+    <%= render "item_fields", :f => builder %>
+  <% end %> 
+</p>
 
