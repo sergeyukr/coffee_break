@@ -5,6 +5,12 @@
   <%= @order.userName %>
 </p>
 
+<% for drink in @order.drinks %>
+<p>  Napitok: <%=h drink.name %> </p>
+<% end %>
 
+<% for baking in @order.bakings %>
+<p>  Vipechka: <%=baking.name %> Count: <%=baking.value %> </p>
+<% end %>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
